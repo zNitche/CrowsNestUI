@@ -1,2 +1,2 @@
-# EagleNestUI
-React frontend for EagleNest
+# CrowsNestUI
+React frontend for CrowsNest
