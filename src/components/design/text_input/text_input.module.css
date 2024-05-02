@@ -1,0 +1,29 @@
+.input-wrapper {
+    display: flex;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    font-size: var(--font-md);
+    font-weight: 400;
+    color: var(--font-dark);
+    background-color: var(--white);
+    border: 1px solid var(--text-input-border);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.full-width {
+    width: 100%;
+}
