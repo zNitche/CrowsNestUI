@@ -1,2 +1,2 @@
 # CrowsNestUI
-React frontend for CrowsNest
+Web UI for [CrowsNest](https://github.com/zNitche/CrowsNest). 
