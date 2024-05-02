@@ -1,3 +1,42 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --divider: #a0afbd;
+    --background: #24292e;
+    --background2: #3a4550;
+    --background2-active: #556370;
+    --font-light: #fff;
+    --font-dark: #212636;
+    --icon-active: #635bff;
+    --background-success-color: #198754;
+    --background-error-color: #dc3545;
+
+    --loader-inner: #dddddd;
+    --loader-outer: var(--icon-active);
+
+    --font-sm: 1.4rem;
+    --font-md: 1.6rem;
+    --font-xl: 2rem;
+    --font-xxl: 2.4rem;
+
+    --btn-primary: #0d6efd;
+    --btn-primary-hover: #115bca;
+    --btn-primary-active: #134faa;
+    --btn-secondary: #6c757d;
+    --btn-secondary-hover: #5e666d;
+    --btn-secondary-active: #505458;
+    --btn-success: #198754;
+    --btn-success-hover: #187449;
+    --btn-success-active: #0f683e;
+    --btn-danger: #dc3545;
+    --btn-danger-hover: #bb3845;
+    --btn-danger-active: #b62231;
+    --btn-disabled: #5a5a5a;
+    --btn-disabled-font: #a1a1a1;
+
+    --text-input-border: #ced4da;
+}
+
 html,
 body {
     margin: 0;
@@ -5,4 +44,35 @@ body {
     font-size: 10px;
     width: 100%;
     max-width: 100%;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    color: var(--font-light);
+    font-size: var(--font-md);
+}
+
+.content-wrapper {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0 16px 0 16px;
+    color: var(--font-dark);
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.content-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media (min-width: 992px) {
+    .content-wrapper {
+        padding: 0 20%;
+    }
 }
