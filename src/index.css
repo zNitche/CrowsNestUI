@@ -2,14 +2,10 @@
     --white: #fff;
     --black: #000;
     --divider: #a0afbd;
-    --background: #24292e;
-    --background2: #3a4550;
-    --background2-active: #556370;
     --font-light: #fff;
-    --font-dark: #212636;
-    --icon-active: #635bff;
-    --background-success-color: #198754;
-    --background-error-color: #dc3545;
+    --font-dark: #212636; 
+    --background-1: #1f1e2f;
+    --background-2: #45475a;
 
     --loader-inner: #dddddd;
     --loader-outer: var(--icon-active);
@@ -44,6 +40,10 @@ body {
     font-size: 10px;
     width: 100%;
     max-width: 100%;
+
+    color: var(--font-light);
+    background-color: var(--background-1);
+    font-size: var(--font-md);
 }
 
 .main-wrapper {
@@ -51,8 +51,6 @@ body {
     flex-direction: column;
     height: 100vh;
     height: 100dvh;
-    color: var(--font-light);
-    font-size: var(--font-md);
 }
 
 .content-wrapper {
@@ -60,7 +58,6 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0 16px 0 16px;
-    color: var(--font-dark);
 
     -ms-overflow-style: none;
     scrollbar-width: none;
