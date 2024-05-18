@@ -6,6 +6,8 @@
     --font-dark: #212636; 
     --background-1: #1f1e2f;
     --background-2: #45475a;
+    --background-3: #48469d;
+    --service-active: #0ac731;
 
     --loader-inner: #dddddd;
     --loader-outer: var(--icon-active);
@@ -14,20 +16,12 @@
     --font-md: 1.6rem;
     --font-xl: 2rem;
     --font-xxl: 2.4rem;
+    --font-xxxl: 3.5rem;
 
-    --btn-primary: #0d6efd;
-    --btn-primary-hover: #115bca;
-    --btn-primary-active: #134faa;
-    --btn-secondary: #6c757d;
-    --btn-secondary-hover: #5e666d;
-    --btn-secondary-active: #505458;
-    --btn-success: #198754;
-    --btn-success-hover: #187449;
-    --btn-success-active: #0f683e;
-    --btn-danger: #dc3545;
-    --btn-danger-hover: #bb3845;
-    --btn-danger-active: #b62231;
-    --btn-disabled: #5a5a5a;
+    --btn-primary: #6d6bc1;
+    --btn-primary-hover: #5e5cca;
+    --btn-primary-active: #5e5cca;
+    --btn-disabled: #6c757d;
     --btn-disabled-font: #a1a1a1;
 
     --text-input-border: #ced4da;
@@ -43,7 +37,6 @@ body {
 
     color: var(--font-light);
     background-color: var(--background-1);
-    font-size: var(--font-md);
 }
 
 .main-wrapper {
@@ -51,6 +44,7 @@ body {
     flex-direction: column;
     height: 100vh;
     height: 100dvh;
+    font-size: var(--font-md);
 }
 
 .content-wrapper {
