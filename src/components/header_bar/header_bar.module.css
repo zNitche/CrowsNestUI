@@ -1,0 +1,23 @@
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.env-data-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-xxl);
+}
+
+.weather-data-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.sensor-row {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
