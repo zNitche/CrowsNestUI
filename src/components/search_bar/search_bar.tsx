@@ -35,7 +35,7 @@ export default function SearchBar({
                 onChange={(event: ChangeEvent<HTMLInputElement>) => {
                     setQuery(event.target.value);
                 }}
-                placeholder="Filename"
+                placeholder="service name..."
                 className={classes["search-input"]}
             />
             <Button
