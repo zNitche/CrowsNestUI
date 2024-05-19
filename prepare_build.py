@@ -6,12 +6,13 @@ import re
 def process_files(root_dir, file_paths):
     for file_path in file_paths:
         path = f"{root_dir}{file_path}"
+        file_name = file_path.split("/")[-1]
 
         print(f"Processing '{path}'...")
 
         if os.path.exists(path):
-            if "favicon.svg" in file_path:
-                shutil.move(path, f"{root_dir}/assets/favicon.svg")
+            if file_path.endswith(".svg"):
+                shutil.move(path, f"{root_dir}/assets/{file_name}")
 
             else:
                 if not path.endswith(".gz"):
@@ -26,9 +27,10 @@ def replace_index_entries(index_content, paths):
 
     for path in paths:
         print(f"Processing '{path}'...")
+        file_name = path.split("/")[-1]
 
-        if "favicon.svg" in path:
-            index_content = index_content.replace(path, f"/assets/favicon.svg")
+        if path.endswith(".svg"):
+            index_content = index_content.replace(path, f"/assets/{file_name}")
 
         else:
             index_content = index_content.replace(path, f"{path}.gz")
