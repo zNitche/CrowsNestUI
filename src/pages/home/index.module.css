@@ -20,6 +20,12 @@
     justify-content: space-between;
 }
 
+.loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 576px) {
     .content-container {
         flex-direction: column;
