@@ -27,6 +27,11 @@ export default function ServiceTile({
     return (
         <div className={classes["service-tile"]}>
             <a
+                onClick={(e) => {
+                    if (!isAvailable) {
+                        e.preventDefault();
+                    }
+                }}
                 target="_blank"
                 href={redirectUrl}
                 rel="noreferrer"
