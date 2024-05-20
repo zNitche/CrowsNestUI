@@ -29,6 +29,9 @@ export default function useQuery<ResponseDataType>({
 }: Params): Results<ResponseDataType> {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
+
+    const [initialiFetched, setInitialiFetched] = useState(false);
+
     const [data, setData] = useState<ResponseDataType | undefined>(undefined);
 
     const isEnabledRef = useRef(isEnabled);
@@ -73,13 +76,14 @@ export default function useQuery<ResponseDataType>({
     ]);
 
     useEffect(() => {
-        if (fetchOnMount && !(queryDependencyParams.length > 0)) {
+        if (fetchOnMount && !initialiFetched) {
             void fetchData();
+            setInitialiFetched(true);
         }
     }, []);
 
     useEffect(() => {
-        if (queryDependencyParams.length > 0 && data !== undefined) {
+        if (queryDependencyParams.length > 0 && initialiFetched) {
             void fetchData();
         }
     }, queryDependencyParams);
