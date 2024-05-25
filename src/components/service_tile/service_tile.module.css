@@ -1,5 +1,5 @@
 .service-tile {
-    flex: 1 0 calc(24% - 5px);
+    flex: 1 0 0;
     max-width: calc(24% - 5px);
     display: flex;
     background-color: var(--background-3);
