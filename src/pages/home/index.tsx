@@ -18,6 +18,11 @@ export default function Home() {
 
     const { data: sensorsData } = useGetSensorsData();
 
+    const showLoader =
+        services === undefined &&
+        !errorWhileLoadingServices &&
+        isLoadingServices;
+
     return (
         <div className={classes.wrapper}>
             <HeaderBar
@@ -32,13 +37,12 @@ export default function Home() {
                 {errorWhileLoadingServices && !isLoadingServices && (
                     <div>Error while loading services data</div>
                 )}
-                {!errorWhileLoadingServices && isLoadingServices && (
+                {showLoader && (
                     <div className={classes.loader}>
                         <Loader />
                     </div>
                 )}
-                {!errorWhileLoadingServices &&
-                    !isLoadingServices &&
+                {!showLoader &&
                     services !== undefined &&
                     services.map((service: ServiceData, index) => {
                         return (

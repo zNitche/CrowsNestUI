@@ -9,7 +9,8 @@ export default function useGetServices(searchQuery: string) {
         searchParams: {
             name: searchQuery,
         },
+        refetchInterval: 10000,
     });
 
-    return { isLoading, isError, refetch, data: data ? data : [] };
+    return { isLoading, isError, refetch, data };
 }
