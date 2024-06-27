@@ -26,6 +26,7 @@ export async function getData<ResponseDataType>(
     const urlObj = addSearchParamsToUrl(url, searchParams);
 
     const res = await fetch(urlObj.toString(), {
+        signal: AbortSignal.timeout(5000),
         method: "GET",
         headers: {},
     });
