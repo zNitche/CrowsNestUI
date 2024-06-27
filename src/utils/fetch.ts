@@ -1,3 +1,5 @@
+import config from "@/config";
+
 export function addSearchParamsToUrl(
     url: string | URL,
     searchParams?: Record<string, string | number | null | undefined>,
@@ -30,4 +32,10 @@ export async function getData<ResponseDataType>(
 
     const resData = (await res.json()) as ResponseDataType | undefined;
     return resData;
+}
+
+export default function getBaseUrl() {
+    const url = config.DEBUG_MODE ? config.API_URL : window.location.origin;
+
+    return `${url}${config.API_SUFIX}`;
 }
