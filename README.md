@@ -35,12 +35,20 @@ npm i
 npm run dev
 ```
 #### Production
-1. Build project
+1. Create `.env` file
+```
+cp .env.template .env
+```
+2. Set `VITE_API_SUFIX` to API sufix:
+```
+/api
+```
+3. Build project
 ```
 npm run build
 ```
-2. Prepare output files for rpi pico upload
+4. Prepare output files for rpi pico upload
 ```
 python3 prepare_build.py
 ```
-3. Copy content of `dist` directory to `<CROWSNEST_ROOT_DIR>/files`
+5. Copy content of `dist` directory to `<CROWSNEST_ROOT_DIR>/files`
