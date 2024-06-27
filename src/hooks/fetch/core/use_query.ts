@@ -62,6 +62,7 @@ export default function useQuery<ResponseDataType>({
         } catch (error) {
             console.error(`error while fetching ${url}: ${error}`);
             setIsError(true);
+            setData(undefined);
         }
 
         setIsLoading(false);

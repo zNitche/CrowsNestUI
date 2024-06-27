@@ -42,7 +42,8 @@ export default function Home() {
                         <Loader />
                     </div>
                 )}
-                {!showLoader &&
+                {!errorWhileLoadingServices &&
+                    !showLoader &&
                     services !== undefined &&
                     services.map((service: ServiceData, index) => {
                         return (
