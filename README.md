@@ -22,7 +22,7 @@ cp .env.template .env
 ```
 http://192.168.1.100
 ```
-3. Set `VITE_API_SUFIX` to API sufix:
+3. Set `VITE_API_PREFIX`:
 ```
 /api
 ```
@@ -39,7 +39,7 @@ npm run dev
 ```
 cp .env.template .env
 ```
-2. Set `VITE_API_SUFIX` to API sufix:
+2. Set `VITE_API_PREFIX`:
 ```
 /api
 ```

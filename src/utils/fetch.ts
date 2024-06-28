@@ -38,5 +38,5 @@ export async function getData<ResponseDataType>(
 export default function getBaseUrl() {
     const url = config.DEBUG_MODE ? config.API_URL : window.location.origin;
 
-    return `${url}${config.API_SUFIX}`;
+    return `${url}${config.API_PREFIX}`;
 }
